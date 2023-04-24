@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>甲流诺如病毒调查问卷</title>
+</head>
+<body>
+<h1>甲流诺如病毒调查问卷</h1>
+<h2>基本信息</h2>
+<form method="post">
+    {% csrf_token %}
+    <p>年龄：<input type="number" name="q1_1"></p>
+    <p>性别：
+        <input type="radio" name="q1_2" value="男">男
+        <input type="radio" name="q1_2" value="女">女
+    </p>
+    <p>职业:</p>
+    <label><input type="radio" name="q1_3" value="学生">学生</label>
+    <label><input type="radio" name="q1_3" value="上班族">上班族</label>
+    <label><input type="radio" name="q1_3" value="自由职业者">自由职业者</label>
+    <label><input type="radio" name="q1_3" value="退休人员">退休人员</label>
+    <label><input type="radio" name="q1_3" value="其他">其他</label>
+    <h2>健康信息</h2>
+    <p>2.1、您是否感染甲流诺如病毒或出现相关症状（发热、咳嗽、乏力等）？
+        <input type="radio" name="q2_1" value="1">是
+        <input type="radio" name="q2_1" value="0">否
+    </p>
+    <p>2.2、您是否居住在甲流诺如病毒疫情的高风险区域？
+        <input type="radio" name="q2_2" value="1">是
+        <input type="radio" name="q2_2" value="0">否
+    </p>
+    <p>2.3、您是否曾经接触过甲流诺如病毒感染者？
+        <input type="radio" name="q2_3" value="1">是
+        <input type="radio" name="q2_3" value="0">否
+    </p>
+    <p>2.4、您是否接受过甲流诺如病毒的疫苗接种？
+        <input type="radio" name="q2_4" value="1">是
+        <input type="radio" name="q2_4" value="0">否
+    </p>
+    <h2>社会评价</h2>
+    <p>3.1、您认为目前政府和社会对于甲流诺如病毒疫情的防控措施是否足够？
+        <input type="radio" name="q3_1" value="非常不足够">非常不足够
+        <input type="radio" name="q3_1" value="不足够">不足够
+        <input type="radio" name="q3_1" value="一般">一般
+    </p>
+    <p>3.2、您认为目前您所在社区/城市/国家对于甲流诺如病毒疫情的防控措施是否足够？
+        <input type="radio" name="q3_2" value="非常不足够">非常不足够
+        <input type="radio" name="q3_2" value="不足够">不足够
+        <input type="radio" name="q3_2" value="一般">一般
+    <p>3.3、您认为目前的疫情防控形势会如何发展？
+        <input type="radio" name="q3_3" value="会持续严峻">会持续严峻
+        <input type="radio" name="q3_3" value="会逐渐好转">会逐渐好转
+        <input type="radio" name="q3_3" value="会很快结束">会很快结束
+    </p>
+    <p>3.4、您是否愿意接受以下防控措施？（可多选）</p>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="佩戴口罩">佩戴口罩</label>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="勤洗手">勤洗手</label>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="保持社交距离">保持社交距离</label>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="减少外出">减少外出</label>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="定期体温检测">定期体温检测</label>
+    <br>
+    <label><input type="checkbox" name="q3_4[]" value="其他">其他</label>
+    <br>
+    <p>3.5、目前疫情对于您的生活产生了哪些影响？（可多选）</p>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="工作受影响">工作受影响</label>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="学习受影响">学习受影响</label>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="日常生活受影响">日常生活受影响</label>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="经济收入受影响">经济收入受影响</label>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="身体健康受影响">身体健康受影响</label>
+    <br>
+    <label><input type="checkbox" name="q3_5[]" value="其他">其他</label>
+    <br>
+    <p>4.1您对于甲流诺如病毒的认知程度 选择题（单选）：
+        <br>
+        <input type="radio" name="q4_1" value="甲流诺如病毒是一种新型流感病毒">A.甲流诺如病毒是一种新型流感病毒
+        <br>
+        <input type="radio" name="q4_1" value="甲流诺如病毒是一种冠状病毒">B.甲流诺如病毒是一种冠状病毒
+        <br>
+        <input type="radio" name="q4_1" value="甲流诺如病毒是一种病毒性腹泻疾病">C.甲流诺如病毒是一种病毒性腹泻疾病
+        <br>
+        <input type="radio" name="q4_1" value="不知道">D.不知道
+        <br>
+    </p>
+    <p>4.2您是否了解当前防控甲流诺如病毒的措施？ 选择题（单选）：
+        <br>
+        <input type="radio" name="q4_2" value="1">是
+        <br>
+        <input type="radio" name="q4_2" value="0">否
+        <br>
+    </p>
+    <p>4.3如果您了解当前防控甲流诺如病毒的措施，请问您掌握的防控知识主要来源于哪里？ 选择题（多选）：
+        <br>
+        <input type="checkbox" name="q4_3[]" value="电视新闻">A.电视新闻
+        <br>
+        <input type="checkbox" name="q4_3[]" value="微信公众号">B.微信公众号
+        <br>
+        <input type="checkbox" name="q4_3[]" value="报纸杂志">C.报纸杂志
+        <br>
+        <input type="checkbox" name="q4_3[]" value="朋友家人">D.朋友家人
+        <br>
+        <input type="checkbox" name="q4_3[]" value="不知道">E.政府官方渠道
+        <br>
+        <input type="checkbox" name="q4_3[]" value="不知道">F.其他
+        <br>
+    </p>
+    <p>4.4您认为目前针对甲流诺如病毒的防控措施是否足够？ 选择题（单选）：
+        <input type="radio" name="q4_4" value="1">是
+        <br>
+        <input type="radio" name="q4_4" value="0">否
+        <br>
+    </p>
+    <p>4.5如果您认为当前防控措施不足，请问您认为应该增强哪些方面的措施？ 选择题（多选）：
+        <br>
+        <input type="checkbox" name="q4_5[]" value="提高公众防护意识">A.提高公众防护意识
+        <br>
+        <input type="checkbox" name="q4_5[]" value="增加医疗保障和应急物资储备">B.增加医疗保障和应急物资储备
+        <br>
+        <input type="checkbox" name="q4_5[]" value="严格入境管控和防控隔离措施">C.严格入境管控和防控隔离措施
+        <br>
+        <input type="checkbox" name="q4_5[]" value="加强病例追踪和排查">D.加强病例追踪和排查
+        <br>
+        <input type="checkbox" name="q4_5[]" value="加强科研攻关和疫苗研发">E.加强科研攻关和疫苗研发
+        <br>
+        <input type="checkbox" name="q4_5[]" value="不知道">F.其他
+        <br>
+    </p>
+    <br>
+    <input type="submit" value="提交">
+</form>
+</body>

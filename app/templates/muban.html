@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar-nav > li > a {
+            color: #333;
+        }
+
+        .navbar-default {
+            background-color: #f8f8f8;
+            border-color: #e7e7e7;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/admin">通哥的网站</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">班级成绩 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/banji">查看</a></li>
+                            <li><a href="/student/add/">添加</a></li>
+                            <li><a href="/student/cha/">修改</a></li>
+                            <li><a href="/student/dele/">删除</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">故事 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/gushi1/">黑夜里的呼吸声</a></li>
+                            <li><a href="/gushi2/">黑暗的陌生人</a></li>
+                            <li><a href="/gushi3/">被困的电梯</a></li>
+                            <li><a href="/gushi4/">黑暗中的呼唤</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/newinter/">国际新闻</a></li>
+                            <li><a href="/newchine/">国内新闻</a></li>
+                            <li><a href="/newwor/">军事新闻</a></li>
+                            <li><a href="/newso/">社会新闻</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/phone/">传入图片</a></li>
+                            <li><a href="/调查/">调查问卷</a></li>
+                            <li><a href="/xiaren/">别按</a></li>
+                            <li><a href="/denglu/">登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

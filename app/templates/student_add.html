@@ -1,0 +1,61 @@
+{% extends 'muban.html' %}
+{% block content %}
+    <div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        添加学生
+                    </h3>
+                </div>
+
+                <form class="form-horizontal" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">学号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="id" value="{{ data.id }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" value="{{ data.name }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="gender" value="{{ data.gender }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">数学成绩</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="math" value="{{ data.math }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Python成绩</label>
+                        <div class="col-sm-10">
+                            <input id="time" type="text" class="form-control" name="python" value="{{ data.python }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">C成绩</label>
+                        <div class="col-sm-10">
+                            <input id="time" type="text" class="form-control" name="C" value="{{ data.C }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="bth btn-primary">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

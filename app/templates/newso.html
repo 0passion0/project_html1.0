@@ -1,0 +1,27 @@
+{% extends 'muban.html' %}
+{% block content %}
+    <div>
+        <div class="container">
+            <div style="margin-bottom: 10px">
+
+            </div>
+            <div class="panel panel-default">
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>社会新闻</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for data in data %}
+                        <tr>
+                            <td><a href={{ data.url.0 }}>{{ data.table.0 }}</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
